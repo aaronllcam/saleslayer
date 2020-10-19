@@ -1,4 +1,123 @@
-$bg-color: #eaeaea;
-body{
-    background-color: $bg-color;
+$subtitle-color: #193BFF;
+$title-color: #202D3A;
+$paragraph-color: #46637F;
+$bg-gray-color: #F4F6F9;
+
+h1{
+    color: $title-color;
+}
+p{
+    color: $paragraph-color;
+}
+
+.services{
+    background-color: $bg-gray-color;
+}
+.align-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title-component span{
+    display: block;
+    color: $subtitle-color;
+    font-size: 16px;
+}
+.brand{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.brand div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 160px;
+    margin: 5px;
+    border: 1px solid #DFE5EC;
+}
+
+.testimonials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 824px;
+    background: rgba(25, 59, 255, 0.8);
+}
+.testimonial-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 795px;
+    height: 290px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0px 0px 25px 0px #000000;
+
+}
+.testimonial-message{
+    width: 540px;
+    color: $title-color;
+    font-weight: bold;
+    line-height: 20px;
+
+}
+.testimonial-title{
+    color: $paragraph-color;
+    font-size: 14px;
+}
+.testimonial-title span{
+    font-weight: bold;
+}
+.testimonial-box_img{
+    position: absolute;
+    left: -5%;
+    bottom: -10%;
+    width: 213px;
+    height: 213px;
+    border-radius: 100%;
+    border: 5px solid #fff;
+}
+.quotes-start{
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 60px;
+    background-image: url('../images/icons/comillas-azul-1.png');
+    top: -5%;
+    left: 15%;
+}
+.quotes-end{
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 60px;
+    background-image: url('../images/icons/comillas-azul-2.png');
+    bottom: -5%;
+    right: 15%;
+}
+.home-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-form > div{
+    width: 370px;
+    height: 550px;
+    padding: 50px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.75);
+
+}
+
+footer{
+    height: 311px;
+    background: url('../images/grass.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

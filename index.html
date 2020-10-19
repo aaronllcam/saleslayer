@@ -1,22 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-	  <title>Bootstrap 4 Example</title>
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-      
-      <link rel="stylesheet" href="./public/css/styles.css">
-	</head>
-	<body>
 
-		<div class="container">
-		  <h1>My First Bootstrap Page</h1>
-		  <p>This is some text.</p>
-		</div>
+<head>
+    <title>Bootstrap 4 Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-	</body>
-</html> 
+    <link rel="stylesheet" href="./public/css/styles.css">
+</head>
+
+<body>
+
+    <div class="main-container container py-3">
+        <header class="logo">
+            <img src="./public/images/logo.png" alt="Sales Layer">
+        </header>
+
+        <section class="main-section container py-5">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <img src="./public/images/teamwork.png" alt="Sales layer soluciones empresariales"
+                        class="img-fluid">
+                </div>
+                <div class="col-xs-12 col-md-6 text-center align-center">
+                    <h1>Te ayudamos a crecer </h1>
+                    <p>Convierte tu ambición en objetivos reales con la ayuda de los partners de Sales Layer</p>
+                    <a href="#" class="btn btn-success">
+                        Encuentra un partner
+                        <img src="./public/images/icons/icons_buscador_simple.png" alt="buscador">
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="services container text-center">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <img class="p-5" src="./public/images/icons/icons_solution-partner_simple_2.png"
+                        alt="Asesores de confianza">
+                    <div class="title-component">
+                        <span>Solutions Partners</span>
+                        <h1>Asesores de confianza</h1>
+                    </div>
+                    <p class="py-4">Nuestros Solution Partners unen su experiencia especializada a un conocimiento
+                        profundo de Sales Layer. Desde integraciones hasta conectividad, ofrecen el conocimiento técnico
+                        y la orientación que necesitas para sacar el máximo provecho a tu implementación.</p>
+                </div>
+                <div class="col-xs-12 col-md-6 align-center">
+                    <img class="p-5" src="./public/images/icons/icons_affiliate-partner_simple_2.png"
+                        alt="Expertos locales">
+                    <div class="title-component">
+                        <span>Partners Afiliados</span>
+                        <h1>Expertos locales</h1>
+                    </div>
+
+                    <p class="py-4">Nuestros Partners Afiliados llevan a Sales Layer alrededor del mundo, dando a
+                        conocer las bondades y el poder de la tecnología PIM. En algunos casos, también pueden
+                        asesorarte con el funcionamiento del PIM para que aproveches todo su potencial.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="partners container text-center py-5">
+            <div class="title-component">
+                <span>Encuentra un partner</span>
+                <h1>un mundo de experiencia</h1>
+            </div>
+            <div class="py-3 d-flex">
+                <select name="categories" id="categories">
+                    <option hidden selected>Ver por categoría</option>
+                    <option value="categoria 1">categoría 1</option>
+                    <option value="categoria 2">categoría 2</option>
+                </select>
+            </div>
+            <div class="brand py-5">
+                <div>
+
+                    <img src="./public/images/brand/logo-3dids.png" alt="3dids">
+                </div>
+                <div>
+
+                    <img src="./public/images/brand/logo-barnesshirley.png" alt="barnesshirley">
+                </div>
+                <div>
+
+                    <img src="./public/images/brand/logo-gtd360.png" alt="gtd360">
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials container text-center">
+
+            <div class="row">
+                <div class="testimonial-box">
+                    <div class="quotes-start"></div>
+                    <div class="quotes-end"></div>
+                    <img class="testimonial-box_img"
+                        src="./public/images/testimonials/our-partners_testimony_helena-grau.png" alt="Helena_Grau">
+
+                    <div class="testimonial-message">
+                        <p>Estamos liderando el cambio digital de nuestros clientes, y Sales Layer nos acompaña con una
+                            solución flexible, avanzada y dinámica.</p>
+                    </div>
+
+                    <div class="testimonial-title mt-5">
+                        <span>Helena Grau</span>
+                        <p>Directora de Telematel Contenidos y matmax</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="contact container py-5">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="title-component">
+                        <span>Encuentra un partner</span>
+                        <h1>Un mundo de experiencia</h1>
+                    </div>
+                    <p class="py-4">Tanto si quieres saber más sobre PIM como si buscas sacar más provecho a tu
+                        implementación, nuestros especialistas están esperándote
+                    </p>
+                    <img src="./public/images/costumer-success.png" alt="contacta con sales layer" class="img-fluid">
+                </div>
+                <div class="col-xs-12 col-md-6 home-form">
+
+                    <div>
+                        <h3 class="text-center">Rellena tus datos y te contactaremos</h3>
+                        <form action="" method="">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" placeholder="Nombre*">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="surname" placeholder="Apellidos*">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="Email" aria-describedby="emailHelp"
+                                    placeholder="Email*">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="company" placeholder="Compañia*">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="checkbox">
+                                <label class="form-check-label" for="checkbox">Sales Layer términos de uso</label>
+                            </div>
+                            <button type="submit" class="btn btn-success mt-3">Prueba gratis</button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <footer>
+
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>
