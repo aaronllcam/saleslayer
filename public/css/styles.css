@@ -82,6 +82,10 @@
   color: #fff;
   padding: 10px 30px;
   font-size: 20px;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  width: max-content;
 }
 
 .btn-default:hover {
@@ -122,6 +126,33 @@
   background-image: url("../images/decorators/deco5.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 575px) {
+  .modal-window {
+    width: 100%;
+    height: auto;
+  }
+  .modal-content {
+    width: 100%;
+    height: auto;
+  }
+  .circle-decorator {
+    display: none;
+  }
+  .close-decorator {
+    width: 50px;
+    height: 70px;
+  }
+  .modal-content_body .tags {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+  .modal-content_body .tags a {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 body {
@@ -211,6 +242,33 @@ p {
   line-height: 28px;
 }
 
+.animate-slideinup {
+  -webkit-animation: SlideInUp 5s ease;
+  animation: SlideInUp 5s ease;
+}
+
+@-webkit-keyframes SlideInUp {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes SlideInUp {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .align-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,7 +313,7 @@ p {
   flex-wrap: wrap;
 }
 
-.brand div {
+.brand_icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,6 +327,16 @@ p {
   height: 160px;
   margin: 5px;
   border: 1px solid #DFE5EC;
+  cursor: pointer;
+}
+
+.brand_icon:hover {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-box-shadow: 0px 0px 20px 0px black;
+  box-shadow: 0px 0px 20px 0px black;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
 }
 
 .testimonials {
@@ -449,6 +517,10 @@ footer {
 
 .content-select select::-ms-expand {
   display: none;
+}
+
+.content-select select option:hover {
+  background: red;
 }
 
 .content-select i {
