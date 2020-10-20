@@ -1,7 +1,6 @@
-body {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
+/* body{
+    background-color: rgba(0,0,0,.2);
+} */
 .modal-window {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,4 +136,36 @@ body {
   background-image: url("../images/decorators/deco5.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 575px) {
+  .modal-window {
+    width: 100%;
+    height: auto;
+  }
+  .modal-content {
+    width: 100%;
+    height: auto;
+  }
+  .circle-decorator {
+    display: none;
+  }
+  .close-decorator {
+    width: 50px;
+    height: 70px;
+  }
+  .modal-content_body .tags {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .modal-content_body .tags a {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
