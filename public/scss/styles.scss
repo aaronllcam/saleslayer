@@ -109,8 +109,18 @@ p{
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 240px;
+        height: 160px;
+        margin: 5px;
+        border: 1px solid #DFE5EC;
+    }
 }
-.brand div{
+/* .brand div{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +128,7 @@ p{
     height: 160px;
     margin: 5px;
     border: 1px solid #DFE5EC;
-}
+} */
 
 .testimonials{
     display: flex;
@@ -155,8 +165,18 @@ p{
 .testimonial-title{
     color: $paragraph-color;
     font-size: 14px;
+    p{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+    span{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+    }
 }
-.testimonial-title p{
+/* .testimonial-title p{
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
@@ -165,7 +185,7 @@ p{
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
-}
+} */
 .testimonial-box_img{
     position: absolute;
     left: -5%;
@@ -197,6 +217,12 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    h3{
+        color: $title-color;
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
 }
 .home-form > div{
     width: 370px;
@@ -206,17 +232,11 @@ p{
     border-radius: 7px;
     box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.75);
 }
-.home-form h3{
-    color: $title-color;
-    font-size: 25px;
-    font-weight: 700;
-    margin-bottom: 40px;
-}
 .form-control{
     border: 1px solid #D5DDE5;
-}
-.form-control::placeholder{
-    color: $form-color;
+    &::placeholder{
+        color: $form-color;
+    }
 }
 
 footer{
@@ -227,47 +247,42 @@ footer{
     background-size: cover;
 }
 
-.content-select select{
-	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-}
-.content-select select{
-	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-}
-.content-select select::-ms-expand {
-    display: none;
-}
 .content-select{
-	width: 200px;
+    width: 200px;
 	position: relative;
-}
- 
-.content-select select{
-	display: inline-block;
-	width: 100%;
-	cursor: pointer;
-  	padding: 7px 10px;
-  	height: 42px;
-  	outline: 0; 
-  	border: 1px solid #D5DDE5;
-	color: #899BAD;
-    position: relative;
-}
-.content-select i{
-	position: absolute;
-	right: 20px;
-	top: calc(50% - 13px);
-	width: 16px;
-	height: 16px;
-	display: block;
-	border-left:4px solid $btn-color;
-	border-bottom:4px solid $btn-color;
-	transform: rotate(-45deg);
-	transition: all 0.25s ease;
-}
+    select{
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        padding: 7px 10px;
+        height: 42px;
+        outline: 0; 
+        border: 1px solid #D5DDE5;
+        color: #899BAD;
+        position: relative;
+
+        &::-ms-expand {
+            display: none;
+        }
+    }
+    i{
+        position: absolute;
+        right: 20px;
+        top: calc(50% - 13px);
+        width: 16px;
+        height: 16px;
+        display: block;
+        border-left:4px solid $btn-color;
+        border-bottom:4px solid $btn-color;
+        transform: rotate(-45deg);
+        transition: all 0.25s ease;
+
+    }
+
+} 
 
 /* Media querys */
 @media (min-width: 768px) and (max-width: 991px){
@@ -301,12 +316,15 @@ footer{
     p{
         font-size: 20px;
     }
-    .title-component h1{
-        font-size: 40px;
-    }
-    .title-component p{
-        font-size: 15px;
-    }
+    .title-component{
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 15px;
+        }
+
+    } 
     .deco1{
         display: none;
     }
@@ -350,12 +368,15 @@ footer{
     p{
         font-size: 20px;
     }
-    .title-component h1{
-        font-size: 40px;
-    }
-    .title-component p{
-        font-size: 15px;
-    }
+    .title-component{
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 15px;
+        }
+
+    } 
     .deco1{
         display: none;
     }
@@ -372,9 +393,9 @@ footer{
     }
     .testimonial-message{
         width: 320px;
-    }
-    .testimonial-message p{
-        font-size: 15px;
+        p{
+            font-size: 15px;
+        }
     }
     .testimonial-title p,
     .testimonial-title span{
