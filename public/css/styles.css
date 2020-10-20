@@ -145,15 +145,6 @@ p {
   border: 1px solid #DFE5EC;
 }
 
-/* .brand div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 240px;
-    height: 160px;
-    margin: 5px;
-    border: 1px solid #DFE5EC;
-} */
 .testimonials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,16 +210,6 @@ p {
   line-height: 30px;
 }
 
-/* .testimonial-title p{
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
-}
-.testimonial-title span{
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
-} */
 .testimonial-box_img {
   position: absolute;
   left: -5%;

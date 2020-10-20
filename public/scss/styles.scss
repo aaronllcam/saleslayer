@@ -91,18 +91,20 @@ p{
     align-items: center;
     justify-content: center;
 }
-.title-component h1{
-    font-family: roc-grotesk, sans-serif;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-}
-.title-component span{
-    display: block;
-    color: $subtitle-color;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
+.title-component{
+    h1{
+        font-family: roc-grotesk, sans-serif;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+    }
+    span{
+        display: block;
+        color: $subtitle-color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+    }
 }
 .brand{
     display: flex;
@@ -120,15 +122,6 @@ p{
         border: 1px solid #DFE5EC;
     }
 }
-/* .brand div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 240px;
-    height: 160px;
-    margin: 5px;
-    border: 1px solid #DFE5EC;
-} */
 
 .testimonials{
     display: flex;
@@ -176,16 +169,6 @@ p{
         line-height: 30px;
     }
 }
-/* .testimonial-title p{
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
-}
-.testimonial-title span{
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
-} */
 .testimonial-box_img{
     position: absolute;
     left: -5%;
