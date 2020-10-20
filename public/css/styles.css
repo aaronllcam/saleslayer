@@ -1,3 +1,129 @@
+/* body{
+    background-color: rgba(0,0,0,.2);
+} */
+.modal-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal-content {
+  width: 600px;
+  height: 450px;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.modal-content_header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content_header img {
+  margin-top: 50px;
+}
+
+.modal-content_header a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #46637F;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.modal-content_body .tags {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.modal-content_body .tags a {
+  margin: 10px;
+  padding: 10px;
+}
+
+.modal-content_body .tags a:nth-child(1) {
+  color: #46637F;
+  background-color: #E0E6ED;
+}
+
+.modal-content_body .tags a:nth-child(1) img {
+  width: 25px;
+}
+
+.modal-content_body .tags a:last-child {
+  color: #FF9902;
+}
+
+.modal-content_body .tags a:last-child img {
+  width: 12px;
+}
+
+.modal-content_body h2 {
+  font-family: roc-grotesk, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  color: #193BFF;
+}
+
+.modal-content_body p {
+  font-size: 16px;
+  text-align: center;
+  color: #46637F;
+}
+
+.btn-default {
+  background-color: #3BC693;
+  border-radius: 1.7rem;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 20px;
+}
+
+.btn-default:hover {
+  color: #fff;
+}
+
+.circle-decorator {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  top: 87px;
+  left: 28px;
+  background-image: url("../images/decorators/deco4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.close-decorator {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 140px;
+  top: 0;
+  right: 0;
+  background-image: url("../images/decorators/deco3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.yellow-decorator {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 70px;
+  top: 0;
+  left: 10px;
+  background-image: url("../images/decorators/deco5.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
