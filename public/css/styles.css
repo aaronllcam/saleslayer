@@ -185,7 +185,7 @@ p {
 
 .btn-default {
   background-color: #3BC693;
-  border-radius: 1.7rem;
+  border-radius: 2.7rem;
   color: #fff;
   padding: 10px 30px;
   font-size: 20px;
@@ -463,7 +463,7 @@ p {
 
 .home-form > div {
   width: 370px;
-  height: 550px;
+  height: 650px;
   color: #899BAD;
   padding: 50px;
   border-radius: 7px;
@@ -499,6 +499,11 @@ p {
 
 .form-control::placeholder {
   color: #899BAD;
+}
+
+.error p {
+  color: red;
+  font-size: 11px;
 }
 
 footer {
