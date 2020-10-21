@@ -192,7 +192,10 @@ p {
 }
 
 .btn-default:hover {
+  background-color: #3c9272;
   color: #fff;
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease;
 }
 
 .services {
@@ -252,29 +255,25 @@ p {
 }
 
 .animate-slideinup {
-  -webkit-animation: SlideInUp 5s ease;
-  animation: SlideInUp 5s ease;
+  -webkit-animation: SlideInUp 10s ease;
+  animation: SlideInUp 10s ease;
 }
 
 @-webkit-keyframes SlideInUp {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    opacity: 1;
   }
 }
 
 @keyframes SlideInUp {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -470,6 +469,12 @@ p {
   border-radius: 7px;
   -webkit-box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.75);
   box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.75);
+}
+
+.home-form input:focus {
+  border: 1px solid #3BC693;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .form-control {

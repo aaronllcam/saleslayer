@@ -7,21 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="./public/images/favicon.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet"> 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap"
+        rel="stylesheet">
+
 
     <link rel="stylesheet" href="./public/css/styles.css">
 </head>
 
 <body>
 
-    <div class="main-container container pt-3">
-        <header class="logo">
+    <div class="main-container  pt-3">
+        <header class="logo container">
             <img src="./public/images/logo.png" alt="Sales Layer">
         </header>
 
         <section class="main-section container py-5">
-            
+
             <div class="row">
                 <div class="col-xs-12 col-md-6">
                     <img src="./public/images/teamwork.png" alt="Sales layer soluciones empresariales"
@@ -29,7 +30,8 @@
                 </div>
                 <div class="col-xs-12 col-md-6 text-center align-center">
                     <h1>Te ayudamos a crecer </h1>
-                    <p class="py-5 lh-40">Convierte tu ambición en objetivos reales con la ayuda de los partners de Sales Layer</p>
+                    <p class="py-5 lh-40">Convierte tu ambición en objetivos reales con la ayuda de los partners de
+                        Sales Layer</p>
                     <a href="#partners" class="btn btn-default">
                         Encuentra un partner
                         <img src="./public/images/icons/icons_buscador_simple.png" alt="buscador">
@@ -39,33 +41,36 @@
 
         </section>
 
-        <section class="services container text-center">
+        <section class="services container-fluid text-center">
             <div class="border-up"></div>
-            <div class="row">
-                <div class="col-xs-12 col-md-6">
-                    <img class="p-5 animate-slideinup" src="./public/images/icons/icons_solution-partner_simple_2.png"
-                        alt="Asesores de confianza">
-                    <div class="title-component">
-                        <span>Solutions Partners</span>
-                        <h1>Asesores de confianza</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <img id="img-service-one" class="p-5 d-none"
+                            src="./public/images/icons/icons_solution-partner_simple_2.png" alt="Asesores de confianza">
+                        <div class="title-component">
+                            <span>Solutions Partners</span>
+                            <h1>Asesores de confianza</h1>
+                        </div>
+                        <p class="py-4">Nuestros Solution Partners unen su experiencia especializada a un conocimiento
+                            profundo de Sales Layer. Desde integraciones hasta conectividad, ofrecen el conocimiento
+                            técnico
+                            y la orientación que necesitas para sacar el máximo provecho a tu implementación.</p>
                     </div>
-                    <p class="py-4">Nuestros Solution Partners unen su experiencia especializada a un conocimiento
-                        profundo de Sales Layer. Desde integraciones hasta conectividad, ofrecen el conocimiento técnico
-                        y la orientación que necesitas para sacar el máximo provecho a tu implementación.</p>
-                </div>
-                <div class="col-xs-12 col-md-6 align-center">
-                    <img class="p-5 animate-slideinup" src="./public/images/icons/icons_affiliate-partner_simple_2.png"
-                        alt="Expertos locales">
-                    <div class="title-component">
-                        <span>Partners Afiliados</span>
-                        <h1>Expertos locales</h1>
+                    <div class="col-xs-12 col-md-6 align-center">
+                        <img id="img-service-two" class="p-5 d-none"
+                            src="./public/images/icons/icons_affiliate-partner_simple_2.png" alt="Expertos locales">
+                        <div class="title-component">
+                            <span>Partners Afiliados</span>
+                            <h1>Expertos locales</h1>
+                        </div>
+
+                        <p class="py-4">Nuestros Partners Afiliados llevan a Sales Layer alrededor del mundo, dando a
+                            conocer las bondades y el poder de la tecnología PIM. En algunos casos, también pueden
+                            asesorarte con el funcionamiento del PIM para que aproveches todo su potencial.</p>
                     </div>
 
-                    <p class="py-4">Nuestros Partners Afiliados llevan a Sales Layer alrededor del mundo, dando a
-                        conocer las bondades y el poder de la tecnología PIM. En algunos casos, también pueden
-                        asesorarte con el funcionamiento del PIM para que aproveches todo su potencial.</p>
                 </div>
-
             </div>
             <div class="border-down"></div>
             <div class="deco1"></div>
@@ -84,7 +89,7 @@
                     <div class="select">
                         Ver por categoría<i></i>
                     </div>
-                    
+
                     <ul class="mt-3" id="select-list">
                         <li data-category="all">Todos</li>
                         <li data-category="affiliate">Affiliate</li>
@@ -103,12 +108,12 @@
                 </div>
                 <div class="brand_icon" data-category="affiliate">
 
-                    <img  src="./public/images/brand/logo-gtd360.png" alt="gtd360">
+                    <img src="./public/images/brand/logo-gtd360.png" alt="gtd360">
                 </div>
             </div>
         </section>
 
-        <section class="testimonials container text-center">
+        <section class="testimonials container-fluid text-center">
 
             <div class="row">
                 <div class="testimonial-box">
@@ -149,7 +154,7 @@
 
                     <div>
                         <h3 class="text-center">Rellena tus datos y te contactaremos</h3>
-                        <form action="" method="">
+                        <form action="" method="POST">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" placeholder="Nombre*">
                             </div>

@@ -38,3 +38,16 @@ const showPartners = () => {
 }
 
 showPartners();
+
+
+const imgServiceOne = document.getElementById('img-service-one');
+const imgServiceTwo = document.getElementById('img-service-two');
+window.onscroll = () => {
+    if(window.scrollY > 450){
+        imgServiceOne.classList.add("animate-slideinup");
+        imgServiceOne.classList.remove("d-none");
+
+        imgServiceTwo.classList.add("animate-slideinup");
+        imgServiceTwo.classList.remove("d-none");
+    }
+}
