@@ -155,6 +155,11 @@
   }
 }
 
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -172,6 +177,10 @@ p {
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+}
+
+.lh-40 {
+  line-height: 40px;
 }
 
 .btn-default {
@@ -496,37 +505,49 @@ footer {
 }
 
 .content-select {
-  width: 200px;
-  position: relative;
-}
-
-.content-select select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  display: inline-block;
-  width: 100%;
   cursor: pointer;
-  padding: 7px 10px;
-  height: 42px;
-  outline: 0;
-  border: 1px solid #D5DDE5;
-  color: #899BAD;
+}
+
+.content-select .select {
   position: relative;
+  border: 1px solid #D5DDE5;
+  padding: 10px;
+  width: 190px;
+  text-align: left;
+  color: #899BAD;
 }
 
-.content-select select::-ms-expand {
+.content-select ul {
   display: none;
+  border: 1px solid none;
+  text-align: left;
+  padding: 0;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(52, 73, 94, 0.15);
+  box-shadow: 0px 0px 25px 0px rgba(52, 73, 94, 0.15);
 }
 
-.content-select select option:hover {
-  background: red;
+.content-select ul li {
+  padding: 10px;
+  color: #46637F;
+  font-size: 16px;
+}
+
+.content-select ul li:hover {
+  background-color: #3BC693;
+  color: #fff;
+  scale: 1.1;
+}
+
+.content-select ul li.active {
+  background-color: #267F6D;
+  color: #fff;
+  scale: 1.1;
 }
 
 .content-select i {
   position: absolute;
-  right: 20px;
-  top: calc(50% - 13px);
+  right: 15px;
+  top: 12px;
   width: 16px;
   height: 16px;
   display: block;

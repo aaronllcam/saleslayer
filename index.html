@@ -8,9 +8,7 @@
     <link rel="shortcut icon" type="image/png" href="./public/images/favicon.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet"> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
 
     <link rel="stylesheet" href="./public/css/styles.css">
 </head>
@@ -31,7 +29,7 @@
                 </div>
                 <div class="col-xs-12 col-md-6 text-center align-center">
                     <h1>Te ayudamos a crecer </h1>
-                    <p class="py-5">Convierte tu ambición en objetivos reales con la ayuda de los partners de Sales Layer</p>
+                    <p class="py-5 lh-40">Convierte tu ambición en objetivos reales con la ayuda de los partners de Sales Layer</p>
                     <a href="#partners" class="btn btn-default">
                         Encuentra un partner
                         <img src="./public/images/icons/icons_buscador_simple.png" alt="buscador">
@@ -83,28 +81,29 @@
             </div>
             <div class="py-3 d-flex">
                 <div class="content-select">
-                    <select name="categories" id="categories">
-                        <option hidden selected class="select-placeholder">Ver por categoría</option>
-                        <option value="all">Todos</option>
-                        <option value="affiliate">Affiliate</option>
-                        <option value="solution">Solution</option>
-
-                    </select>
-                    <i class="select"></i>
+                    <div class="select">
+                        Ver por categoría<i></i>
+                    </div>
+                    
+                    <ul class="mt-3" id="select-list">
+                        <li data-category="all">Todos</li>
+                        <li data-category="affiliate">Affiliate</li>
+                        <li data-category="solutions">Solutions</li>
+                    </ul>
                 </div>
             </div>
-            <div class="brand py-5">
-                <div class="brand_icon">
+            <div id="brand" class="brand py-5">
+                <div class="brand_icon" data-category="affiliate">
 
                     <img src="./public/images/brand/logo-3dids.png" alt="3dids">
                 </div>
-                <div class="brand_icon">
+                <div class="brand_icon" data-category="solutions">
 
                     <img src="./public/images/brand/logo-barnesshirley.png" alt="barnesshirley">
                 </div>
-                <div class="brand_icon">
+                <div class="brand_icon" data-category="affiliate">
 
-                    <img src="./public/images/brand/logo-gtd360.png" alt="gtd360">
+                    <img  src="./public/images/brand/logo-gtd360.png" alt="gtd360">
                 </div>
             </div>
         </section>
@@ -184,6 +183,10 @@
     </div>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="public/js/custom.js"></script>
 </body>
 
 </html>
