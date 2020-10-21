@@ -1,4 +1,4 @@
-@import 'colors', 'modal';
+@import 'colors';
 li{
     list-style: none;
     text-decoration: none;
@@ -446,3 +446,5 @@ footer{
         height: 123px;
     }
 }
+@import 'modal';
+

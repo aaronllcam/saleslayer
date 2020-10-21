@@ -1,3 +1,4 @@
+/* SlideInUP effect */
 const imgServiceOne = document.getElementById('img-service-one');
 const imgServiceTwo = document.getElementById('img-service-two');
 window.onscroll = () => {
@@ -9,8 +10,9 @@ window.onscroll = () => {
         imgServiceTwo.classList.remove("d-none");
     }
 }
+/* End SlideInUP effect */
 
-
+/* Code Select from partners */
 $('.select').on('click', () =>{
     $('.content-select ul').toggle("slow");
 })
@@ -53,10 +55,10 @@ const showPartners = () => {
 
 showPartners();
 
+/* End Code Select from partners */
+
+
 /* validate form */
-
-
-/* end validate form */
 const form = document.getElementById("home-form");
 const button = document.getElementById("form-button");
 
@@ -174,3 +176,120 @@ const validateName = (name) => {
     if(nameRegex.test(name)) return true;
     else return false;
 }
+/* end validate form */
+
+/* Partners modal window */
+/* const logoPartners = document.getElementById('brand-1');
+const close = document.getElementById('modal-close');
+
+logoPartners.addEventListener('click', () => {
+    const modalWindow = document.getElementById('partnerModal');
+    modalWindow.classList.remove('d-none');
+})
+
+close.addEventListener('click', (e) => {
+    e.preventDefault();
+    const modalWindow = document.getElementById('partnerModal');
+    modalWindow.classList.add('d-none');
+
+}) */
+/* End Partners modal window */
+
+const logos = document.getElementsByClassName('brand_icon');
+const close = document.getElementById('modal-close');
+let cont = 0;
+// console.log(logos);
+const titles = [
+    {
+        type: "Affiliate Partner",
+        country: "España",
+        title: "Tu estrategia de transformación digital",
+        description: "En 3dids contamos con más de 14 años de experiencia, más de 35 profesionales y más de 55 marcas internacionalizadas. Somos una empresa de transformación digital enfocada en negocios y resultados. Ayudamos a las marcas y las organizaciones a crecer en todos los sectores, nacionales e internacionales. Juntos lo hacemos realidad.",
+        web: "https://www.3dids.com/"
+    },
+    {
+        type: "Solution Partner",
+        country: "Reino Unido",
+        title: "Accede al poder de la gestión de información de producto",
+        description: "Ayudamos a negocios a crear su ecosistema digital y optimizarlo a través del marketing digital, ecommerce y sistemas back-end. Nuestro trabajo se enfoca a conseguir más y mejores ventas online. La clave de éxito de una estrategia de ecommerce y lanzamiento a mercado es contar con información de producto completa y precisa.",
+        web: "https://barnesandshirley.co/"
+    },
+    {
+        type: "Solution Partner",
+        country: "España",
+        title: "Innovación y desarrollo como esencia",
+        description: "Ofrecemos soluciones a nivel de desarrollo, transformación tecnológica y gestión de logística y almacenes. Buscamos soluciones específicas para cada cliente, cuidando hasta el más mínimo detalle. GTD360 está formado por un equipo de profesionales que aplican todos sus conocimientos y habilidades a tu servicio.",
+        web: "https://gtd360.es/"
+    }
+];
+const fragment = document.createDocumentFragment();
+const pp = document.getElementById('pp');
+// console.log(titles[0]);
+for (const logo of logos) {
+
+    const div = document.createElement("DIV");
+    div.setAttribute('id', `partner-${cont}`);
+    fragment.appendChild(div);
+    console.log(fragment);
+    /* jjjjj */
+    let mondongo = "";
+    mondongo += `<div id="partner-brand-${cont}" class="modal-window d-none">`;
+    mondongo += '<div class="modal-content container">';
+    mondongo += `<div class="modal-content_header"><a id="modal-close-brand-${cont}" href="#">X</a><img src="../../public/images/brand/logo-3dids.png" alt="3dids-logo"></div>`;
+    mondongo += '<div class="modal-content_body">';
+    mondongo += '<div class="tags">';
+    mondongo += '<a href="#">';
+    mondongo += '<img src="../../public/images/icons/icons_affiliate-partner_simple_1.png" alt="Solution partner">';
+    mondongo += `${titles[cont].type}`;
+    mondongo += '</a>';
+    mondongo += '<a href="#">';
+    mondongo += '<img src="../../public/images/icons/location.png" alt="Location">';
+
+    mondongo += `${titles[cont].country}`;
+
+    mondongo += '</a>';
+
+    mondongo += '</div>';
+    mondongo += '<h2 id="modal-title">';
+    mondongo += `${titles[cont].title}</h2>`;
+    mondongo += `<p>${titles[cont].description}</p>`;
+    mondongo += `<a href="${titles[cont].web}" class="btn btn-default">Ver web</a>`;
+    mondongo += '</div>';
+
+    mondongo += '<div class="circle-decorator"></div>';
+    mondongo += '<div class="close-decorator"></div>';
+    mondongo += '<div class="yellow-decorator"></div>';
+
+    mondongo += '</div></div>'
+    console.log(mondongo);
+
+    /* jjjjjj */
+    
+    logo.addEventListener('click', () => {
+        console.log("conta: ",logo.id);
+        // console.log("titulos: ",titles[cont]);
+        const modalWindow = document.getElementById(`partner-${logo.id}`);
+        const close = document.getElementById(`modal-close-${logo.id}`);
+        
+        close.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modalWindow = document.getElementById(`partner-${logo.id}`);
+            modalWindow.classList.add('d-none');
+        })
+        const modaltitle = document.getElementById('modal-title');
+        // modaltitle.innerHTML = titles[cont];
+        modalWindow.classList.remove('d-none');
+    });
+
+    $("#pp").append(mondongo);
+    //document.getElementById(`partner-${cont}`).classList.add("modal-content");
+    cont ++;
+    // console.log("hola", cont);
+}
+
+/* close.addEventListener('click', (e) => {
+    e.preventDefault();
+    const modalWindow = document.getElementById('partnerModal');
+    modalWindow.classList.add('d-none');
+
+}) */
