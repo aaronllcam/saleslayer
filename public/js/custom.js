@@ -1,4 +1,5 @@
 /* SlideInUP effect */
+/* Programamos para que cuando el scroll llegue a la sección de servicios se lance la animación*/
 const imgServiceOne = document.getElementById('img-service-one');
 const imgServiceTwo = document.getElementById('img-service-two');
 window.onscroll = () => {
@@ -13,11 +14,13 @@ window.onscroll = () => {
 /* End SlideInUP effect */
 
 /* Code Select from partners */
+/* Cuando hacemos click sobre el select desplegará la lista con las categorías */
 $('.select').on('click', () => {
     $('.content-select ul').toggle("slow");
 })
 
-
+/* Esta función muestra los partners que pertencen a la categoria seleccionada en la lista de categorias desplegada
+del select */
 const showPartners = () => {
 
     const categories = document.querySelectorAll("#select-list > li");
@@ -28,7 +31,7 @@ const showPartners = () => {
         category.addEventListener("click", function (e) {
             let category = e.target.dataset.category;
 
-            //Añadimos la clase active al elemento clicado y removemos dicha clase de los ptros elementos
+            //Añadimos la clase active al elemento clicado y removemos dicha clase de los otros elementos
             for (categ of categories) {
                 if (category == categ.dataset.category) {
                     categ.classList.add("active");
@@ -36,7 +39,7 @@ const showPartners = () => {
                     categ.classList.remove("active");
                 }
             }
-            //recorremos los partnerns y si pertenecen a dicha categoría los mostramos con el estilo en liena flex, al resto los escondemos
+            //Recorremos los partnerns y si pertenecen a dicha categoría los mostramos con el estilo en linea flex, el resto los escondemos
             for (const partner of partners) {
                 if (category != partner.dataset.category) {
                     partner.style.display = "none";
@@ -55,6 +58,13 @@ const showPartners = () => {
 /* End Code Select from partners */
 
 /* mock json */
+/* En esta sección hemos pretendido simular un response de una API.
+    Imaginemos que la API nos devueve un JSON con la información de los partners tal y como muestro a continuación.
+    Y con esta información vamos a construir de manera dinámica los elementos que ese mostraran en la sección de partners 
+    y las ventanas modales asociadas a dichos partners.
+    Podemos comentar, que esto lo podriamos hacer de manera estática y programarlo con los datos que nos llegan del backend
+    directamente incidiendo sobre el html mediante html enriquecido con php(por ejemplo con blade) o javascript si se diera el caso.
+*/
 const partners = [
     {
         name: "3dids",
@@ -88,7 +98,7 @@ const partners = [
 /* end mock json */
 
 /* Dinamic render partners whitin index.html  */
-
+/*  renderPartners nos renderiza "pinta" los partners del JSON que viene de la API en la sección partners*/
 const renderPartners = (partners) => {
     const brandSection = document.getElementById("brand");
     let partnerCont = 0;
@@ -108,7 +118,7 @@ const renderPartners = (partners) => {
 
 
 /* Partners modal window PopUP functionality render Partners modal window function*/
-
+/* renderModalPartners nos renderiza "pinta" las ventanas modales a partir de los datos renderizados en la sección partners */
 const renderModalPartners = (partners) => {
     const logos = document.getElementsByClassName('brand_icon');
     const close = document.getElementById('modal-close');
@@ -163,7 +173,7 @@ const renderModalPartners = (partners) => {
 }
 /* End render Partners modal window function*/
 
-
+/* Llamamos a las tres funciones para implementar la funcionalidad deseada */
 renderPartners(partners);
 renderModalPartners(partners);
 showPartners();
@@ -171,6 +181,8 @@ showPartners();
 
 
 /* validate form */
+/* en esta parte he realizado un pequeño código de validación de formulario,
+aunque cabe destacar que podemos usar un plugin con mayor funcionalidad */
 const form = document.getElementById("home-form");
 const button = document.getElementById("form-button");
 
