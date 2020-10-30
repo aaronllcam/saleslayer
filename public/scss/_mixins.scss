@@ -1,0 +1,72 @@
+@mixin font-family($font){
+    font-family: $font;
+}
+
+@mixin btn-default($color, $hover-color){
+    background-color: #3BC693;
+    border-radius: 1.7rem;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 20px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    width: max-content;
+
+    &:hover{
+        background-color: $hover-color;
+        color: #fff;
+        transition: background-color 1s ease;
+    }
+    @include small{
+        font-size: 13px;
+    }
+}
+
+@mixin title-component($title-color,$subtitle-color, $title-font){
+    h1{
+        @include font-family($title-font);
+        color: $title-color;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        @include small{
+            font-size: 40px;
+        }
+        @include medium{
+            font-size: 40px;
+        }
+    }
+    span{
+        display: block;
+        color: $subtitle-color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+    }
+    p{
+        @include small{
+            font-size: 15px;
+        }
+        @include medium{
+            font-size: 15px;
+        }
+    }
+}
+
+/* Media Queries */
+@mixin small {
+    @media (max-width: #{$small}){
+        @content;
+    }
+}
+@mixin medium {
+    @media (min-width: #{$small - 1}) and (max-width: #{$medium}){
+        @content;
+    }
+}
+@mixin large {
+    @media (min-width: #{$medium - 1}) and (max-width: #{$large}){
+        @content;
+    }
+}

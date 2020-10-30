@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'mixins';
+
 .modal-window{
     position: fixed;
     top: 0;
@@ -8,12 +11,20 @@
     justify-content: center;
     align-items: center;
     background: rgba(0,0,0,.5);
+    @include small{
+        width: 100%;
+        height: auto;
+    }
 }
 
 .modal-content{
     width: 800px;
     background-color: #fff;
     padding: 20px;
+    @include small{
+        width: 100%;
+        height: auto;
+    }
     
 }
 .modal-content_header{
@@ -38,9 +49,17 @@
         display: flex;
         justify-content: center;
         margin: 20px 0;
+        @include small{
+            flex-direction: column-reverse;
+            text-align: center;
+        }
         a{
             margin: 10px;
             padding: 10px;
+            @include small{
+                width: 60%;
+                margin: 0 auto;
+            }
             &:nth-child(1){
                 color: #46637F;
                 background-color: #E0E6ED;
@@ -72,19 +91,7 @@
 }
 
 .btn-default {
-    background-color: #3BC693;
-    border-radius: 1.7rem;
-    color: #fff;
-    padding: 10px 30px;
-    font-size: 20px;
-    margin: 0 auto;
-    display: flex;
-    text-align: center;
-    width: max-content;
-}
-
-.btn-default:hover {
-  color: #fff;
+    @include btn-default($btn-color, $hover-color);
 }
 
 .circle-decorator{
@@ -97,6 +104,9 @@
     background-image: url('../images/decorators/deco4.png');
     background-size: cover;
     background-repeat: no-repeat;
+    @include small{
+        display: none;
+    }
 }
 .close-decorator{
     position: absolute;
@@ -108,6 +118,10 @@
     background-image: url('../images/decorators/deco3.png');
     background-size: cover;
     background-repeat: no-repeat;
+    @include small{
+        width: 50px;
+        height: 70px;
+    }
 }
 .yellow-decorator{
     position: absolute;
@@ -119,35 +133,4 @@
     background-image: url('../images/decorators/deco5.png');
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-@media (max-width: 575px){
-    .modal-window{
-        width: 100%;
-        height: auto;
-    }
-    .modal-content{
-        width: 100%;
-        height: auto;
-
-    }
-    .circle-decorator{
-        display: none;
-    }
-    .close-decorator {
-        width: 50px;
-        height: 70px;
-    }
-    .modal-content_body{
-        .tags{
-            flex-direction: column-reverse;
-            justify-content: center;
-            text-align: center;
-            a{
-                width: 60%;
-                margin: 0 auto;
-            }
-        }
-        
-    }
 }
