@@ -13,10 +13,11 @@
  
 # Algunas consideraciones:
   1. Hemos usado gulp para automatizar las tareas de compilación de los .scss. En este fichero por ejemplo hemos creado una tarea con autoprefixer para dar servicio de estilos a navegadores más antiguos.
-  2. En la carpeta public/scss hay tres archivos:
-      - _colors.scss donde tenemos las varibles de los colores
-      - modal.scss donde tenemos los estilos de las ventanas modales PopUp de los partners
-      - styles.scss donde tenemos los estilos de todo el proyecto, importando los dos anteriores a este fichero.
+  2. En la carpeta public/scss hay cuatro archivos:
+      - _variables.scss donde tenemos las varibles de los colores, fuentes, media queries...
+      - _mixins donde tenemos los mixins reutilizables
+      - _modal.scss donde tenemos los estilos de las ventanas modales PopUp de los partners
+      - styles.scss donde tenemos los estilos de todo el proyecto, importando los archivos anteriores a este fichero.
   3. En el archivo .gitignore tenemos las carpetas que no se han de subir a git, en este caso la carpeta node_modules
   4. Hemos usado bootstrap 4 como ayuda en la maquetación y estructura principal, así como conocimientos de css modernos mediante flexbox.
   5. Hemos usado la sintaxis de ecmas escript 6 y hemos hecho dinámica, mediante programación de javascript, la parte de partners suponiendo que la API nos devuelve un JSON con los partners asociados (Con la lista que me indicásteis).
